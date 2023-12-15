@@ -1,19 +1,7 @@
 export default function updatePromise() {
   let motion01 = gsap.timeline({});
-
-  motion01.fromTo(
-    ".promise_items",
-    {
-      // 애니메이션의 시작 상태
-      // 해당 요소의 수직 위치를 현재 위치에서 상대적으로 20%만큼 아래로 이동
-      yPercent: 20,
-    },
-    {
-      // 애니메이션의 끝 상태
-      // 해당 요소의 수직 위치를 현재 위치에서 상대적으로 70%만큼 위로 이동
-      yPercent: -70,
-    }
-  );
+  // 초기 위치에서 아래로 5%만큼 이동시킨 후, 최종적으로 위로 70%만큼 이동시키는 효과
+  motion01.fromTo(".promise_items", { yPercent: 5 }, { yPercent: -70 });
 
   ScrollTrigger.create({
     animation: motion01,
@@ -36,9 +24,11 @@ export default function updatePromise() {
         $(this).removeClass("on");
         $(".promise_link_item").removeClass("on");
       },
+
       onLeaveBack: () => {
         $(this).removeClass("on");
       },
+
       onEnter: () => {
         $(this).addClass("on");
         // 현재 반복되는 .promise_item 요소의 인덱스를 가져오고,
@@ -49,6 +39,7 @@ export default function updatePromise() {
         $(".promise_link_item").removeClass("on");
         $(".promise_link_item").eq(idx).addClass("on");
       },
+
       onEnterBack: () => {
         $(this).addClass("on");
         let idx = $(this).index();
