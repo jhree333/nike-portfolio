@@ -1,0 +1,49 @@
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}
+
+.img_wrap {
+  & img {
+    width: 100%;
+  }
+}
+
+.btn {
+  color: #fff;
+  background: linear-gradient(225deg, #3589fc, #00aee7);
+  border-radius: 50rem;
+  margin-top: 2.25rem;
+  font-size: 1.25rem;
+  padding: 1.125rem 2rem;
+  cursor: pointer;
+  border: 0 solid transparent;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+  font-weight: 600;
+  line-height: 1.5;
+  display: inline-block;
+  font-family:
+    neue-haas-grotesk-display,
+    Helvetica Neue,
+    Arial,
+    sans-serif;
+}
+
+.btn.bg_white {
+  margin-left: 10px;
+  color: #3589fc;
+  border: 2px solid #00aee7;
+  background: #fff;
+  &:hover {
+    color: #fff;
+    background: #3589fc;
+  }
+}
