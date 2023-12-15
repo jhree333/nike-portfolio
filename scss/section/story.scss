@@ -1,0 +1,170 @@
+.sc_story {
+  overflow: hidden;
+  background: url("../images/banner/bg_noise_black.jpg");
+  color: #fff;
+
+  > .img_wrap {
+    position: relative;
+  }
+
+  .story_title {
+    font-size: 120px;
+    font-weight: 600;
+    line-height: 144px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    transform: translateY(50%);
+  }
+
+  .story_text01,
+  .story_text02 {
+    display: block;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .story_info {
+    padding-top: 200px;
+    margin-bottom: 150px;
+  }
+
+  .stroy_subtitle {
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: #aaa;
+  }
+
+  .story_desc {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #aaa;
+    margin-bottom: 50px;
+  }
+
+  .story_lists {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .story_list {
+    flex: 1 0 50%;
+    margin-bottom: 150px;
+    padding: 0 50px;
+    box-sizing: border-box;
+
+    &:nth-child(odd) {
+      transform: translateY(20%);
+    }
+  }
+
+  .story_img_area {
+    position: relative;
+    overflow: hidden;
+
+    .story_list_img {
+      transition: 0.5s ease-in;
+    }
+
+    &::after {
+      content: "";
+      transition: 0.5s ease-in;
+    }
+
+    &:hover {
+      .story_list_img {
+        transform: scale(1.1);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transform: scale(50);
+        opacity: 0.2;
+      }
+    }
+  }
+
+  .story_list_title {
+    margin-top: 50px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+  }
+
+  .story_list_subtitle {
+    font-size: 10px;
+    letter-spacing: 4px;
+    line-height: 15px;
+  }
+
+  @keyframes rotate_btn {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .story_btn_wrap {
+    margin-left: 400px;
+    margin-bottom: 50px;
+
+    .story_round_btn {
+      height: 15rem;
+      width: 15rem;
+      position: relative;
+      margin-left: 110px;
+      font-size: 18px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 15rem;
+        width: 15rem;
+        border: 1px dashed #3589fc;
+        border-radius: 50%;
+      }
+
+      .inner_btn {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px solid #3589fc;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          background: #3589fc;
+        }
+      }
+
+      &:hover {
+        &::before {
+          animation: rotate_btn 6s linear infinite;
+        }
+      }
+    }
+  }
+}

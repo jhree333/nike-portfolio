@@ -1,0 +1,103 @@
+.sc_approach {
+  background: url("../images/banner/bg_dotted_lines.jpg") no-repeat;
+  background-position: top right;
+  background-size: contain;
+  padding: 150px 0;
+  width: 100%;
+
+  .approach_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+
+  .approach_title {
+    font-size: 10px;
+    letter-spacing: 4px;
+    line-height: 15px;
+    color: #505050;
+    margin-bottom: 50px;
+  }
+
+  .approach_subtitle {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+    margin-bottom: 50px;
+  }
+
+  .approach_desc {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #aaa;
+    width: 433px;
+  }
+
+  .approach_lists {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .approach_list {
+    flex: 1 0 50%;
+    padding: 0 50px;
+    margin-top: 100px;
+    box-sizing: border-box;
+
+    &:nth-child(even) {
+      transform: translateY(-100px);
+    }
+  }
+
+  .approach_item {
+    background: #fff;
+    padding: 64px;
+    box-sizing: border-box;
+    box-shadow: 0 16px 40px 0 #00000014;
+    height: 100%;
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+    border-radius: 10px;
+
+    .round_circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      color: #3589fc;
+      border: 2px solid #3589fc;
+
+      &:hover {
+        background: #3589fc;
+
+        .round_circle_number {
+          display: none;
+        }
+
+        .right_arrow {
+          display: block;
+        }
+      }
+    }
+    .right_arrow {
+      display: none;
+    }
+  }
+
+  .approach_item_title {
+    margin-top: 50px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+  }
+
+  .approach_item_desc {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}

@@ -1,0 +1,45 @@
+.sc_home {
+  height: 100vh;
+
+  .info {
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1920px;
+    width: 100%;
+    padding: 0 80px;
+    box-sizing: border-box;
+
+    .info_title {
+      font-size: 85px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+  }
+
+  .swiper {
+    height: 100%;
+
+    .swiper_img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-slide {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #000;
+        opacity: 0.5;
+      }
+    }
+  }
+}
